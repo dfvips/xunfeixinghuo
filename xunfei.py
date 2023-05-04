@@ -83,9 +83,9 @@ try:
     # ask_question('介绍下自己') ## 因为每次都是介绍这句话，所以不请求了。
     print('您好，我是科大讯飞研发的认知智能大模型，我的名字叫讯飞星火认知大模型。我可以和人类进行自然交流，解答问题，高效完成各领域认知 智能需求。') 
     while True:
-        question = input("\n\n请输入您的问题：")
+        question = input("\n请输入您的问题：")
         if question == 'exit':
             break
         ask_question(question,chat_id) # 发起提问
 except KeyboardInterrupt:
-    print("\n\n感谢您使用讯飞星火认知大模型，欢迎再次使用！")
+    print("\n感谢您使用讯飞星火认知大模型，欢迎再次使用！")
