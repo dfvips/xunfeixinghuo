@@ -1,2 +1,6 @@
 # xunfeixinghuo
- Implement AI intelligent dialogue with Iflytek Starfire cognitive model in Python for real-time questioning and answering.
+### 使用说明
+- pip install requests base64 json
+- python xunfei.py
+
+
