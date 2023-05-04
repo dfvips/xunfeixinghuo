@@ -56,10 +56,10 @@ def decode(text):
 def ask_question(question,chat_id):
     url = "https://xinghuo.xfyun.cn/iflygpt/u/chat_message/chat"
     payload = {
-        # 'fd': userinfo.fd, ## 用户FD，可省略
+        'fd': userinfo.fd, ## 用户FD
         'chatId': chat_id,
         'text': question, # 提交的问题
-        # 'GtToken': userinfo.GtToken,  ## 用户GtToken，可省略
+        'GtToken': userinfo.GtToken,  ## 用户GtToken
         'clientType': '1' # 默认值，网页
     }
     response = requests.request("POST", url, headers=headers, data = payload, stream=True)
