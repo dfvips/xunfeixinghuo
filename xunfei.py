@@ -3,7 +3,7 @@ import base64
 import json
 import copy
 import sys
-import user
+import userinfo
 
 # 定义全局变量
 chat_id = None
