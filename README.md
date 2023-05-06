@@ -1,4 +1,4 @@
-# New 支持对话过程中，导出AI朗读语音
+# New 支持载入会话，导出对话，支持对话过程中，导出AI朗读语音
 # Python版讯飞星火认知大模型AI智能对话，命令行交互对话
 ### 使用说明
 - pip install requests base64 json langdetect websocket
