@@ -4,6 +4,7 @@ import json
 import copy
 import sys
 import userinfo
+import text2audio
 
 # 定义全局变量
 chat_id = None
@@ -99,6 +100,7 @@ def ask_question(question, chat_id):
         log_data = {"chat_id":chat_id, "question": question, "answer": response_text}
         json.dump(log_data, f, ensure_ascii=False)
         f.write("\n")
+    text2audio.done(response_text, question)
 
 # 重命名会话
 def set_name(question, chat_id):
@@ -113,38 +115,40 @@ def set_name(question, chat_id):
     if response_data['code'] != 0:
         print('\n初始化会话名称失败')
 
-try:
-    # 加载会话日志，如果存在则直接读取
-    if not load_session_log():
-        is_new_session = True
-        chat_id = generate_chat_id() # 生成新的会话ID
-        set_name("新会话", chat_id) # 设置会话名称
-    else:
-        # 提示是否载入上次的会话
+# Main入口
+if __name__ == '__main__':
+    try:
+        # 加载会话日志，如果存在则直接读取
+        if not load_session_log():
+            is_new_session = True
+            chat_id = generate_chat_id() # 生成新的会话ID
+            set_name("新会话", chat_id) # 设置会话名称
+        else:
+            # 提示是否载入上次的会话
+            while True:
+                answer = input("是否载入上次的会话？(Y/N): ")
+                if answer.upper() == "Y":
+                    is_new_session = False
+                    break
+                elif answer.upper() == "N":
+                    is_new_session = True
+                    chat_id = generate_chat_id() # 生成新的会话ID
+                    break
+                else:
+                    print("请输入正确的选项！")
+        count = 0
+        print('您好，我是科大讯飞研发的认知智能大模型，我的名字叫讯飞星火认知大模型。我可以和人类进行自然交流，解答问题，高效完成各领域认知智能需求。') 
         while True:
-            answer = input("是否载入上次的会话？(Y/N): ")
-            if answer.upper() == "Y":
-                is_new_session = False
+            count += 1
+            ques = input("\n请输入您的问题：")
+            if ques == 'exit':
                 break
-            elif answer.upper() == "N":
-                is_new_session = True
-                chat_id = generate_chat_id() # 生成新的会话ID
-                break
-            else:
-                print("请输入正确的选项！")
-    count = 0
-    print('您好，我是科大讯飞研发的认知智能大模型，我的名字叫讯飞星火认知大模型。我可以和人类进行自然交流，解答问题，高效完成各领域认知智能需求。') 
-    while True:
-        count += 1
-        question = input("\n请输入您的问题：")
-        if question == 'exit':
-            break
-        ask_question(question, chat_id)
-        if is_new_session == True &  count == 1:
-            set_name(question, chat_id) # 设置会话名称
-    # 保存会话日志
-    save_session_log()
-except KeyboardInterrupt:
-    # 保存会话日志并退出程序
-    save_session_log()
-print("\n感谢您使用讯飞星火认知大模型，欢迎再次使用！")
+            ask_question(ques, chat_id)
+            if is_new_session == True &  count == 1:
+                set_name(ques, chat_id) # 设置会话名称
+        # 保存会话日志
+        save_session_log()
+    except KeyboardInterrupt:
+        # 保存会话日志并退出程序
+        save_session_log()
+    print("\n感谢您使用讯飞星火认知大模型，欢迎再次使用！")
