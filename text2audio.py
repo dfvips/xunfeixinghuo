@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+# This script was created by dreamfly
+# author: dreamfly
+# github: https://github.com/dfvips
 import websocket
 import json
 import base64
