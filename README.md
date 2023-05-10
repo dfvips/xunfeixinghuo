@@ -6,8 +6,7 @@
 ### 补充
 - 需要在userinfo.py中填写cookie, fd, GtToken
 ### 示例图片
-![giff](https://user-images.githubusercontent.com/21048630/236246826-5dd17c81-856b-4e50-9816-57f141d4e88d.gif)
-![image](https://user-images.githubusercontent.com/21048630/236620845-a85526af-9c36-4ccf-8448-b18679ee688e.png)
+![image](https://github.com/dfvips/xunfeixinghuo/assets/21048630/1a32bad6-a7e1-42c0-9b4d-f5fbccac296a)
 ### Star
 <a href="https://https://github.com/dfvips/xunfeixinghuo">
         <img width="500" alt="Star History Chart" src="https://api.star-history.com/svg?repos=dfvips/xunfeixinghuo&type=Date">
