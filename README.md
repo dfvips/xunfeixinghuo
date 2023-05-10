@@ -7,6 +7,8 @@
 - 需要在userinfo.py中填写cookie, fd, GtToken
 ### 示例图片
 ![yy](https://github.com/dfvips/xunfeixinghuo/assets/21048630/64c83ac8-5126-4cb0-a78c-d2378f8ba308)
+### 示例音频
+https://github.com/dfvips/xunfeixinghuo/assets/21048630/7b97dc05-a467-4fb4-9fd8-58ad04dd3c6c
 ### Star
 <a href="https://https://github.com/dfvips/xunfeixinghuo">
         <img width="500" alt="Star History Chart" src="https://api.star-history.com/svg?repos=dfvips/xunfeixinghuo&type=Date">
