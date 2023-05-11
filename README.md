@@ -5,6 +5,7 @@
 - python xunfei.py
 ### 补充
 - 需要在userinfo.py中填写cookie, fd, GtToken
+- 提示"module ‘websocket‘ has no attribute ‘enableTrace‘"的情况，参考<a href="https://blog.csdn.net/u014534808/article/details/113655577">https://blog.csdn.net/u014534808/article/details/113655577</a>
 ### 示例图片
 ![yy](https://github.com/dfvips/xunfeixinghuo/assets/21048630/64c83ac8-5126-4cb0-a78c-d2378f8ba308)
 ### 示例音频
