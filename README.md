@@ -12,7 +12,7 @@
 ### 示例音频
 https://github.com/dfvips/xunfeixinghuo/assets/21048630/7b97dc05-a467-4fb4-9fd8-58ad04dd3c6c
 ### Star
-<a href="https://https://github.com/dfvips/xunfeixinghuo">
+<a href="https://github.com/dfvips/xunfeixinghuo">
         <img width="500" alt="Star History Chart" src="https://api.star-history.com/svg?repos=dfvips/xunfeixinghuo&type=Date">
       </a> 
 <h2>声明</h2>
