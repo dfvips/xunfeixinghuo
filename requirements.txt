@@ -1,0 +1,4 @@
+websocket==0.2.1
+websocket-client==0.57.0
+requests==2.28.1
+langdetect==1.0.9
